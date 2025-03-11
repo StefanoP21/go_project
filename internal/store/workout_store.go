@@ -135,7 +135,7 @@ func (pg *PostgresWorkoutStore) UpdateWorkout(Workout *Workout) error {
 
 	query := `
 		UPDATE workouts
-		SET title = $1, description $2, duration_minutes = $3, calories_burned = $4
+		SET title = $1, description = $2, duration_minutes = $3, calories_burned = $4
 		WHERE id = $5
 	`
 	result, err := tx.Exec(query, Workout.Title, Workout.Description, Workout.DurationMinutes, Workout.CaloriesBurned, Workout.ID)
