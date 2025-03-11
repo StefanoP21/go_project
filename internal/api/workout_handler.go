@@ -150,7 +150,7 @@ func (wh *WorkoutHandler) HandleDeleteWorkoutByID(w http.ResponseWriter, r *http
 	}
 
 	err = wh.workoutStore.DeleteWorkout(workoutID)
-	if err != sql.ErrNoRows {
+	if err == sql.ErrNoRows {
 		http.Error(w, "workout not found", http.StatusNotFound)
 		return
 	}
