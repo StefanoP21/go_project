@@ -10,5 +10,5 @@ CREATE TABLE IF NOT EXISTS tokens (
 
 -- +goose Down
 -- +goose StatementBegin
-DROP  TABLE tokens;
+DROP TABLE tokens;
 -- +goose StatementEnd
