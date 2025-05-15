@@ -11,7 +11,7 @@ type PostgresTokenStore struct {
 	db *sql.DB
 }
 
-func NewPosgresTokenStore(db *sql.DB) *PostgresTokenStore {
+func NewPostgresTokenStore(db *sql.DB) *PostgresTokenStore {
 	return &PostgresTokenStore{
 		db: db,
 	}
